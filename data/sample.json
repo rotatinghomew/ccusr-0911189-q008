@@ -1,0 +1,113 @@
+{
+  "groups": [
+    {
+      "id": "island",
+      "size": 160
+    },
+    {
+      "id": "shore",
+      "size": 240
+    }
+  ],
+  "surveys": [
+    {
+      "station": "A",
+      "group": "island",
+      "segment": "g1",
+      "min": 50,
+      "max": 75
+    },
+    {
+      "station": "B",
+      "group": "island",
+      "segment": "g2",
+      "min": 65,
+      "max": 90
+    },
+    {
+      "station": "C",
+      "group": "island",
+      "segment": "g3",
+      "min": 30,
+      "max": 65
+    },
+    {
+      "station": "C",
+      "group": "shore",
+      "segment": "g4",
+      "min": 100,
+      "max": 190
+    }
+  ],
+  "overlap": [
+    {
+      "group": "island",
+      "left": "g1",
+      "right": "g2",
+      "min": 45,
+      "max": 55
+    }
+  ],
+  "offers": [
+    {
+      "id": "QA",
+      "station": "A",
+      "path": "trunk",
+      "window": "morning",
+      "slot": 1,
+      "network": "local",
+      "price": 45
+    },
+    {
+      "id": "QB",
+      "station": "B",
+      "path": "trunk",
+      "window": "morning",
+      "slot": 1,
+      "network": "remote",
+      "price": 38
+    },
+    {
+      "id": "QC",
+      "station": "C",
+      "path": "radio",
+      "window": "morning",
+      "slot": 1,
+      "network": "public",
+      "price": 55
+    },
+    {
+      "id": "QD",
+      "station": "D",
+      "path": "press",
+      "window": "morning",
+      "slot": 1,
+      "network": "local",
+      "price": 20
+    }
+  ],
+  "outages": [
+    {
+      "id": "maintenance",
+      "paths": [
+        "trunk"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "offer": "QA",
+      "paid": 44
+    }
+  ],
+  "policy": {
+    "budget": 100,
+    "floors": {
+      "island": 40,
+      "shore": 100
+    },
+    "scenarios": [
+      "maintenance"
+    ]
+  }
+}
